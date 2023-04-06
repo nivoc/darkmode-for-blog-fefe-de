@@ -23,21 +23,38 @@ export default function Home() {
           </p>
         </li>
         <li>
-          <b>Info / Code:</b> <a href="/darkmode.css">raw</a>
-          <pre>
-            {`@media (prefers-color-scheme: dark) {
-  body {
-    color: #e1e1e1;
-    background: #000000;
-  }
-  a:link {
-    color: #91a1ff;
-  }
-  a:visited {
-    color: #627aff;
-  }
-}          `}
-          </pre>
+          <p>
+            <b>Dauerhaft setzen ohne Link</b> <br />
+            Alternativ könnt ihr auch einen Cookie setzten, der den Dark-Mode
+            dauerhaft aktiviert. (Bis ihr den Cookie löscht.)
+          </p>
+          <p>
+            Dazu einfach auf blog.fefe.de gehen, die Development-Console öffnen
+            (Rechte Maustaste - Inspect) und folgenden code ausführen:
+            <pre>
+              {`function setCookie(name, value, days) {  
+  let expires = "";  
+  if (days) {  
+    const date = new Date();  
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
+    expires = "; expires=" + date.toUTCString();  
+  }  
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";  
+}  
+  
+setCookie("css", "https://fefe-darkmode.vercel.app/darkmode.css", 365);`}
+            </pre>
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Deaktivieren</b> <br />
+            Cookie löschen oder mit diesem Link{" "}
+            <a href="http://blog.fefe.de/?css=">auf leer setzten.</a>
+          </p>
+        </li>
+        <li>
+          <b>Info / Code:</b> <a href="/darkmode.css">Raw css</a>
         </li>
         <li>
           <p>
@@ -75,6 +92,13 @@ export default function Home() {
             width={1128 / 2}
             height={1528 / 2}
           />
+        </li>
+        <li>
+          <p>
+            <a href="https://github.com/nivoc/darkmode-for-blog-fefe-de">
+              GitHub
+            </a>
+          </p>
         </li>
       </ul>
     </main>
