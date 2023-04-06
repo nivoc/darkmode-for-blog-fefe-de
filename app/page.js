@@ -29,8 +29,9 @@ export default function Home() {
             dauerhaft aktiviert. (Bis ihr den Cookie löscht.)
           </p>
           <p>
-            Dazu einfach auf blog.fefe.de gehen, die Development-Console öffnen
-            (Rechte Maustaste - Inspect) und folgenden code ausführen:
+            Dazu einfach auf blog.fefe.de, die Development-Console öffnen
+            (Rechte Maustaste - Inspect) und folgenden Code in der Console
+            ausführen:
             <pre>
               {`function setCookie(name, value, days) {  
   let expires = "";  
