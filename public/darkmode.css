@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background: #000000;
+  }
+  a:link {
+    color: #91a1ff;
+  }
+}
