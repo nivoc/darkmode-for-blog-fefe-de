@@ -41,7 +41,7 @@ export default function Home() {
         </li>
         <li>
           <p>
-            <b>Vorschau</b> Tag / Nacht
+            <b>Vorschau</b> Nacht / Tag
           </p>
           <Image
             src="/dark.png"
